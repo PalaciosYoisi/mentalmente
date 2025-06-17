@@ -24,7 +24,6 @@ Este sistema permite a los pacientes agendar citas psicológicas y gestionar sus
 mentalmente/
 ├── admin/               # Panel de administración
 ├── config/             # Archivos de configuración
-├── database/           # Scripts y migraciones de base de datos
 ├── public/             # Archivos públicos (CSS, JS, imágenes)
 ├── src/                # Código fuente principal
 ├── storage/            # Almacenamiento de archivos generados
@@ -54,6 +53,10 @@ El sistema utiliza una base de datos MySQL con las siguientes tablas principales
 4. `tokens_consentimiento`
    - Gestiona los tokens para firmar consentimientos
    - Campos: id, cita_id, token, fecha_expiracion, fecha_uso
+
+5. `administradores`
+   - Gestiona los usuarios administradores del sistema
+   - Campos: id, nombre, correo, password, rol, fecha_creacion, ultimo_acceso
 
 ## Dependencias Principales
 
@@ -90,6 +93,7 @@ El sistema utiliza una base de datos MySQL con las siguientes tablas principales
 - Visualización de consentimientos
 - Administración de pacientes
 - Reportes y estadísticas
+- Gestión de usuarios administradores
 
 ## Seguridad
 
